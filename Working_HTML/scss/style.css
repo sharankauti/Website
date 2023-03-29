@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 834px) {
+  h1 {
+    font-size: 2.8rem !important;
+  }
+  h2 {
+    font-size: 2.5rem !important;
+  }
+  h3 {
+    font-size: 2.2rem !important;
+  }
+  h4 {
+    font-size: 1.9rem !important;
+  }
+}
+.btn_main {
+  background-color: #6ca12b !important;
+  color: #FFFFFF !important;
+  font-size: 1.8rem !important;
+  padding: 5px 20px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  opacity: 0.8;
+  transition: transform 0.8s ease-out;
+}
+.btn_main:focus {
+  box-shadow: none !important;
+}
+.btn_main:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+body {
+  background: rgba(255, 255, 255, 0.9019607843);
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+@media (max-width: 834px) {
+  header .container {
+    max-width: 90%;
+  }
+}
+header .navbar {
+  padding: 0 !important;
+  background: #262626;
+}
+header a.brandText {
+  color: #FFFFFF;
+  font-size: 3rem;
+  padding: 15px 0px;
+  margin-right: 100px;
+}
+@media (max-width: 414px) {
+  header a.brandText {
+    padding: 10px 0px !important;
+  }
+}
+header button.custom_Toggler {
+  border: none !important;
+}
+header button.custom_Toggler:focus {
+  box-shadow: none !important;
+}
+header button.custom_Toggler .navbar-toggler-icon {
+  background-image: url("/assets/Icons/hamburger.svg");
+  width: 3rem;
+}
+header a.nav_link {
+  position: relative;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  padding: 23px !important;
+  text-transform: upperCase;
+  position: relative;
+}
+header a.nav_link:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background: #FFFFFF;
+  transition: width 0.7s;
+}
+header a.nav_link:hover, header a.nav_link:focus {
+  color: #FFFFFF;
+}
+header a.nav_link:hover::before, header a.nav_link:focus::before {
+  width: 70%;
+}
+@-webkit-keyframes border_anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes border_anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+header a.nav_link.dropdown-toggle .dropdownIcon {
+  font-size: 2rem;
+  position: absolute;
+  top: 26px;
+  right: 15px;
+}
+header a.nav_link.dropdown-toggle::after {
+  border: none !important;
+}
+header ul.dropdown-menu {
+  width: 100%;
+  left: 23px !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #f5fffa;
+  border: none !important;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-name: bounceInUp;
+          animation-name: bounceInUp;
+}
+@-webkit-keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+header ul.dropdown-menu li {
+  border-left: 3px solid transparent;
+  transition: 0.4s all;
+}
+header ul.dropdown-menu li:hover {
+  border-color: rgb(91, 185, 13);
+}
+header ul.dropdown-menu a {
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  color: #000000;
+  transform: translateX(0px);
+  transition: 0.4s all;
+}
+header ul.dropdown-menu a:hover {
+  background-color: transparent;
+}
+header ul.dropdown-menu li:hover a {
+  transform: translateX(3px);
+}
+header #hiddencheckbox {
+  display: none;
+}
+header #hiddencheckbox:checked + label.hamburgerLabel .line:nth-child(1) {
+  transform: translateY(12px) rotate(-45deg);
+}
+header #hiddencheckbox:checked + label.hamburgerLabel .line:nth-child(2) {
+  opacity: 0;
+}
+header #hiddencheckbox:checked + label.hamburgerLabel .line:nth-child(3) {
+  transform: translateY(-12px) rotate(45deg);
+}
+header label.hamburgerLabel {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 60px;
+  top: 5px;
+  cursor: pointer;
+}
+header label.hamburgerLabel .line {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background: #FFFFFF;
+  transition: 0.5s;
+}
+header label.hamburgerLabel .line:nth-child(1) {
+  top: 12px;
+}
+header label.hamburgerLabel .line:nth-child(2) {
+  top: 24px;
+}
+header label.hamburgerLabel .line:nth-child(3) {
+  top: 36px;
+}
+@media (max-width: 844px) {
+  header a.nav_link:hover {
+    color: #000000;
+  }
+  header a.nav_link:hover::before {
+    content: none;
+  }
+  header .navbar-collapse {
+    position: fixed;
+    top: 75px;
+    right: 0px;
+    height: 100vh;
+    width: 70%;
+    background-color: #FFFFFF;
+  }
+  header .navbar-collapse.collapsing {
+    right: -75% !important;
+    transition: height 0s ease;
+  }
+  header .navbar-collapse.show {
+    right: 0 !important;
+    transition: right 0.5s ease-in-out;
+  }
+  header .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: right 0.5s ease-in-out;
+  }
+  header a.nav_link {
+    color: #000000;
+    border-bottom: none;
+    padding: 15px 25px !important;
+  }
+  header a.nav_link.dropdown-toggle .dropdownIcon {
+    top: 19px;
+    right: unset;
+  }
+  header ul.dropdown-menu {
+    width: 95%;
+    margin: 0 auto;
+  }
+  header .custom_Toggler {
+    padding: 0 !important;
+  }
+}
+@media (max-width: 414px) {
+  header .navbar-collapse {
+    top: 65px;
+  }
+}
+
+.innerContent {
+  padding: 50px 0px;
+}
+.innerContent .parallex {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 600px;
+  width: 100%;
+  background-size: cover;
+}
+.innerContent .contentWrapper {
+  padding: 100px 0px;
+  width: 85%;
+}
+.innerContent .contentWrapper h1 {
+  font-size: 3.5rem;
+  color: #000000;
+  font-weight: bold;
+  text-transform: upperCase;
+  line-height: 1.5;
+}
+@media (max-width: 844px) {
+  .innerContent .contentWrapper {
+    width: 90%;
+    padding: 70px 0px;
+  }
+  .innerContent .contentWrapper h1 {
+    line-height: 1.3;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}/*# sourceMappingURL=style.css.map */
